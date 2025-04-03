@@ -83,7 +83,7 @@ userRouter.post('/login', async(req, res) => {
     const { email, password } = req.body
     // Find user in database
     const user = await findUserByEmail(email)
-
+console.log ()
     // if no user found
     if(!user?._id){
       buildErrorResponse(res, "Invalid Credentials")
